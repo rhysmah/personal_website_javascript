@@ -5,6 +5,10 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+app.get("/resume", (req, res) => {
+
+})
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
 });
