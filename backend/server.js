@@ -5,8 +5,9 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.get("/resume", (req, res) => {
-
+app.get("/resume", (_, res) => {
+    const filePath = path.join(__dirname, 'documents/resume_aug_2024.pdf');
+    res.sendFile(filePath);
 })
 
 app.listen(port, () => {
